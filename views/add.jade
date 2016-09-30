@@ -1,0 +1,20 @@
+doctype html
+html
+	head
+		meta(charset='utf-8')
+		title 添加商品
+		link(rel="stylesheet", href="./libs/bootstrap.min.css")
+		link(rel="stylesheet", href="./css/add.css")
+		script(type='text/javascript',src='./libs/jquery.min.js')
+		script(type='text/javascript',src='./libs/bootstrap.min.js')
+
+	body
+		.panel.panel-info#add
+			.panel-heading 添加商品
+			.panel-body 
+				input(type="text",class='form-control input-sm',id='cname' placeholder='商品名称')
+				input(type="text",class='form-control input-sm',id='cprice' placeholder='商品价格')
+				button(type='button',class='btn btn-success btn-block btn-sm' id='add_btn') 添加
+				a(href='home',class='btn btn-info pull-right btn-sm') 返回商品页
+
+		script(type='text/javascript',src='./js/add.js')

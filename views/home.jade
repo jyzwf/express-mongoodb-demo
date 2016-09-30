@@ -1,0 +1,27 @@
+doctype html
+html
+	head
+		meta(charset='utf-8')
+		title 首页
+		link(rel="stylesheet", href="./libs/bootstrap.min.css")
+		link(rel="stylesheet", href="./css/home.css")
+		script(type='text/javascript',src='./libs/jquery.min.js')
+		script(type='text/javascript',src='./libs/bootstrap.min.js')
+
+	body
+		.panel.panel-default#home
+			.panel-heading.home_heading
+				span 商品展示页
+				.btn_right
+					a.btn.btn-sm.btn-success(href='add') 添加商品
+					a.btn.btn-sm.btn-success(href='cart') 购物车
+					a.btn.btn-sm.btn-info(href='logout') 退出
+			.padel-body.home_body
+				ul
+					each Commodity in Commoditys
+						li
+							img(src='#{Commodity.imgSrc}', alt="")
+							p.
+								#{Commodity.name}
+								<span>#{Commodity.price}</span>
+							a.btn.btn-sm.btn-success(role='button',href='/addToCart/#{Commodity._id}') 加入购物车 

@@ -1,0 +1,22 @@
+body,html{
+	height:100%;
+}
+
+body{
+	display: flex;
+	justify-conetnt:center;
+	align-items:center;
+}
+
+#register,#login{
+	width:300px;
+	margin:0px auto;
+
+	input,button{
+		margin-bottom: 15px;
+	}
+
+	a{
+		margin-bottom: 0
+	}
+}

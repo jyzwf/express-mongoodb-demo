@@ -1,0 +1,41 @@
+#cart {
+  padding: 15px; }
+  #cart header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #cac6c6; }
+    #cart header * {
+      margin: 0; }
+    #cart header a {
+      padding: 0 2px;
+      margin-right: 10px; }
+  #cart img {
+    width: 50px;
+    height: 50px;
+    margin-right: 8px; }
+  #cart .add, #cart .sub {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    margin: 0 8px;
+    border: 1px solid #cac6c6;
+    cursor: pointer; }
+  #cart input[type=number] {
+    width: 50px; }
+  #cart td, #cart th {
+    text-align: center;
+    vertical-align: middle; }
+  #cart footer {
+    text-align: right;
+    padding: 0 80px; }
+    #cart footer span {
+      color: red;
+      font-size: 20px; }
+    #cart footer button {
+      margin-left: 8px; }
+
+/*# sourceMappingURL=addToCart.css.map */

@@ -1,0 +1,49 @@
+doctype html
+html
+	head
+		meta(charset='utf-8')
+		title 添加购物车
+		link(rel="stylesheet", href="./libs/bootstrap.min.css")
+		link(rel="stylesheet", href="./css/addToCart.css")
+		script(type='text/javascript',src='./libs/jquery.min.js')
+		script(type='text/javascript',src='./libs/bootstrap.min.js')
+
+	#cart
+		header
+			h3 购物车
+			.operate
+				a.btn.btn-sm.btn-success(role='button',href='home') 商品页
+				a.btn.btn-sm.btn-info(role='button',href='logout') 退出
+
+		table.table
+			thead
+				tr
+					th
+						input#CheckAll(type='checkbox')
+						全选
+					th 商品
+					th 价格
+					th 数量
+					th 操作
+
+			tbody
+				each v,i in carts
+					tr
+						td
+							input(type="checkbox",name='check_item',data-id='#{v._id}',data-index='#{i}',data-price='#{v.cPrice}')
+						td
+							img(src="#{v.cImgSrc}", alt="")
+							!{v.cName}
+						td ￥#{v.cPrice}
+						td.operate_count
+							span.sub(data-type='sub') -
+							input(type="number",value='#{v.cQuantity}',id='Q#{i}')
+							span.add(data-type='add') +
+						td
+							a.btn.btn-danger(role='button',href='/delFromCart/#{v._id}') 删除
+
+		footer
+			总计：<span id='money'> ￥0.00 </span>
+			button.btn.btn-success.btn-sm#pay 结算
+
+		script(type='text/javascript',src='./js/cart.js')

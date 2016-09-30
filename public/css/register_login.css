@@ -1,0 +1,17 @@
+body, html {
+  height: 100%; }
+
+body {
+  display: flex;
+  justify-conetnt: center;
+  align-items: center; }
+
+#register, #login {
+  width: 300px;
+  margin: 0px auto; }
+  #register input, #register button, #login input, #login button {
+    margin-bottom: 15px; }
+  #register a, #login a {
+    margin-bottom: 0; }
+
+/*# sourceMappingURL=register_login.css.map */
